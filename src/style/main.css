@@ -1,4 +1,7 @@
 @import "./sideBar.css";
+@import "./todoContainer.css";
+@import "./taskInput.css";
+@import "./singleTask.css";
 
 body {
   margin: 0;
@@ -15,6 +18,9 @@ code {
 }
 
 .App {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   background-color: #17171D;
   height: 100vh;
 }

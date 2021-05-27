@@ -1,0 +1,16 @@
+.todo-containter {
+  flex-grow: 1;
+  padding-top: 2rem;
+}
+
+.todo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.todo-content > h2 {
+  color: white;
+}

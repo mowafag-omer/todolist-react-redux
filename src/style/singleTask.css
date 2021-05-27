@@ -1,0 +1,33 @@
+.single-task {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 2.3rem;
+  margin-top: 10px;
+  border-radius: 7px;
+  background: #25252F;
+  cursor: pointer;
+}
+
+.icon {
+  width: .6rem;
+  height: .6rem;
+  margin: 0 8px;
+  border: 1.5px solid #FC6B97;
+  border-radius: 50%;
+}
+
+.icon-fill {
+  background: #FC6B97;
+}
+
+.task {
+  flex-grow: 1;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #AFAFAF;
+}
