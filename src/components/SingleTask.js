@@ -14,8 +14,8 @@ const SingleTask = ({id, task, done}) => {
   return (
     <div className="single-task">
       <span 
-        className={`icon ${!!done && 'icon-fill'}`} 
-        style={!!done ? {background: color, borderColor: color} : {borderColor: color}}
+        className={`icon ${done && 'icon-fill'}`} 
+        style={done ? {background: color, borderColor: color} : {borderColor: color}}
       ></span>
       
 
@@ -25,7 +25,7 @@ const SingleTask = ({id, task, done}) => {
         <>
           <span
             onClick={handleToggle}
-            className={`task ${!!done && "completed"}`}
+            className={`task ${done && "completed"}`}
           >
             {task}
           </span>
