@@ -2,6 +2,7 @@
 @import "./todoContainer.css";
 @import "./taskInput.css";
 @import "./singleTask.css";
+@import "./updateTask.css";
 
 body {
   margin: 0;

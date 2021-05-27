@@ -15,3 +15,15 @@
 .todo-content > h2 {
   color: white;
 }
+
+@media (max-width: 945px) {
+  .todo-content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 580px) {
+  .todo-content {
+    width: 90%;
+  }
+}

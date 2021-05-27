@@ -6,7 +6,7 @@ import { addTask } from "../store/actions";
 const TaskInput = () => {
   const [task, setTask] = useState("")
   const dispatch = useDispatch();
-  const projectId = useSelector(state => state.currentProject.id)
+  const project = useSelector(state => state.currentProject)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -15,7 +15,7 @@ const TaskInput = () => {
       id: uuid(),
       task,
       done: false,
-      projectId
+      projectId: project.id
     }))
 
     setTask('')
@@ -24,15 +24,16 @@ const TaskInput = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className="add-form-group">
           <input
             value={task}
             onChange={(e) => setTask(e.target.value)}
             type="text"
             placeholder="Add a task..."
+            maxLength="35"
             required
           />
-          <button type="submit">+</button>
+          <button type="submit" style={{background: project.color}}>+</button>
         </div>
       </form>
     </div>

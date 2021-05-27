@@ -29,3 +29,7 @@
   font-weight: bolder;
   cursor: pointer;
 }
+
+.active {
+  background: #48485e;
+}
