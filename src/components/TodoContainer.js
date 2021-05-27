@@ -8,8 +8,8 @@ const TodoContainer = () => {
   const currentProject = useSelector(state => state.currentProject)
 
   const projectTasks = tasks.filter(task => task.projectId === currentProject.id)
-  const todo = projectTasks.filter(task => task.done)
-  const completed = projectTasks.filter(task => !task.done)
+  const todo = projectTasks.filter(task => task.done === false)
+  const completed = projectTasks.filter(task => task.done === true)
 
   return (
     <div className="todo-containter">

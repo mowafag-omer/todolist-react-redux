@@ -8,12 +8,12 @@ let initialState = {
   ],
   currentProject: { id: 1, name: "school", color: "#FC6B97" },
   tasks: [
-    {id:'1Z', task: 'The first task of todo list app', done: false, projectId: 1},
-    {id:'2e', task: 'The first task of todo list app', done: false, projectId: 1},
-    {id:'3g', task: 'The first task of todo list app', done: false, projectId: 1},
-    {id:'4g', task: 'The first task of todo list app', done: 1, projectId: 1},
-    {id:'5y', task: 'The first task of todo list app', done: 1, projectId: 1},
-    {id:'6g', task: 'The first task of todo list app', done: 1, projectId: 1}  
+    {id:'1Z', task: 'The first task of todo list app 1', done: false, projectId: 1},
+    {id:'2e', task: 'The first task of todo list app 2', done: false, projectId: 1},
+    {id:'3g', task: 'The first task of todo list app 3', done: false, projectId: 1},
+    {id:'4g', task: 'The first task of todo list app 4', done: true, projectId: 1},
+    {id:'5y', task: 'The first task of todo list app 5', done: true, projectId: 1},
+    {id:'6g', task: 'The first task of todo list app 6', done: true, projectId: 1}  
   ]
 }
 
