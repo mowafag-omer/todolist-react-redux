@@ -1,16 +1,42 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { v1 as uuid } from "uuid";
+import { addTask } from "../store/actions";
 
 const TaskInput = () => {
+  const [task, setTask] = useState("")
+  const dispatch = useDispatch();
+  const projectId = useSelector(state => state.currentProject.id)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    dispatch(addTask({
+      id: uuid(),
+      task,
+      done: false,
+      projectId
+    }))
+
+    setTask('')
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <input type="text" name="task" placeholder="Add a task..." required/>
+          <input
+            value={task}
+            onChange={(e) => setTask(e.target.value)}
+            type="text"
+            placeholder="Add a task..."
+            required
+          />
           <button type="submit">+</button>
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default TaskInput
+export default TaskInput;

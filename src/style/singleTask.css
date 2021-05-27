@@ -31,3 +31,8 @@
   text-decoration: line-through;
   color: #AFAFAF;
 }
+
+.single-task img {
+  margin: 0 8px;
+  color: #e6777780;
+}

@@ -1,24 +1,20 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import TaskInput from './TaskInput'
 import TasksList from './TasksList'
 
 const TodoContainer = () => {
-  const list = [
-    { task: 'The first task of todo list app', done: 0 },
-    { task: 'The first task of todo list app', done: 0 },
-    { task: 'The first task of todo list app', done: 0 },
-    { task: 'The first task of todo list app', done: 1 },
-    { task: 'The first task of todo list app', done: 1 },
-    { task: 'The first task of todo list app', done: 1 }
-  ]
+  const tasks = useSelector(state => state.tasks)
+  const currentProject = useSelector(state => state.currentProject)
 
-  const todo = list.filter(task => task.done === 0)
-  const completed = list.filter(task => task.done === 1)
+  const projectTasks = tasks.filter(task => task.projectId === currentProject.id)
+  const todo = projectTasks.filter(task => task.done)
+  const completed = projectTasks.filter(task => !task.done)
 
   return (
     <div className="todo-containter">
       <div className="todo-content">
-        <h2>School</h2>
+        <h2>{currentProject.name}</h2>
         <TaskInput />
         <TasksList listTitle="Todo" taskslist={todo} />
         <TasksList listTitle="Completed" taskslist={completed} />
