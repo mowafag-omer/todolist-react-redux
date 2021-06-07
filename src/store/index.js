@@ -1,4 +1,10 @@
-import {createStore} from 'redux'
-import {reducer} from './reducers'
+import { createStore, combineReducers } from 'redux'
+import { taskReducer } from './reducers/taskReducer'
+import { projectReducer } from './reducers/projectReducer'
 
-export let store = createStore(reducer)
+let rootReducer = combineReducers({
+  projects: projectReducer,
+  tasks: taskReducer
+})
+
+export let store = createStore(rootReducer)

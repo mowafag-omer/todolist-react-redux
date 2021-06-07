@@ -1,0 +1,10 @@
+
+.update-form-group input {
+  height: 2rem;
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: aliceblue;
+  outline: none;
+}

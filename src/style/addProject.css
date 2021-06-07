@@ -1,0 +1,128 @@
+.add-project {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.add-project span {
+  width: 3.5rem;
+  height: 1px;
+  margin: 0 auto 1rem;
+  background: #444452;
+}
+
+.show-btn {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  border: none;
+  border-radius: 50%;
+  background: #8181a0;
+  color: #25252F;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+.show-btn:active {
+  box-shadow: none;
+}
+
+.add-project form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 4.5rem;
+  bottom: .1rem;
+  width: 13rem;
+  min-height: 8rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background: #8181a0;
+}
+
+.add-project form::after {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  bottom: 1rem;
+  transform: rotate(45deg);
+  width: 1rem;
+  height: 1rem;
+  background: inherit;
+}
+
+.add-project input[type=text] {
+  padding: .4rem;
+  font-size: 1rem;
+  background: rgb(129, 129, 160);
+  color: #25252F;
+  border: 2px solid #25252F;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+}
+.add-project input[type=text]::placeholder {
+  color: #25252F;
+}
+
+.add-btn {
+  padding: .3rem .6rem;
+  border: none;
+  border-radius: 4px;
+  color: #9b9bc2;
+  background: #25252F;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+  border: 2px solid #25252F;
+  border-radius: 5px;
+  color: #25252F;
+}
+
+.colors legend {
+  font-weight: 500;
+}
+
+.colors label{
+  display: block;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin: 5px;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.colors input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: inherit;
+  height: inherit;
+  cursor: pointer;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: .5rem;
+  left: .5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background: #25252F;
+}
+
+input[type=radio]:checked ~ .checkmark::after {
+  display: block;
+}

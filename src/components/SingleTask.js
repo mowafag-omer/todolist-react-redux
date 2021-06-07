@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTask, deleteTask } from "../store/actions";
+import { toggleTask, deleteTask } from "../store/actions/taskActions";
 import UpdateTask from "./UpdateTask";
 
 const SingleTask = ({id, task, done}) => {
   const [showUpdate, setShowUpdate] = useState(false)
   const dispatch = useDispatch()
-  const color = useSelector(state => state.currentProject.color)
+  const { color } = useSelector(state => state.projects.currentProject)
 
   const handleToggle = () => dispatch(toggleTask({id, done: !done}))
   const handleDelete = () => dispatch(deleteTask(id))

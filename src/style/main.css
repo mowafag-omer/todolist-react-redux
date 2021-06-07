@@ -1,8 +1,9 @@
 @import "./sideBar.css";
 @import "./todoContainer.css";
-@import "./taskInput.css";
+@import "./addTask.css";
 @import "./singleTask.css";
 @import "./updateTask.css";
+@import "./addProject.css";
 
 body {
   margin: 0;

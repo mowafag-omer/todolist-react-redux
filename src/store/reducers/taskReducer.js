@@ -1,12 +1,6 @@
-import { CHANGE_PROJECT, ADD_TASK, TOGGLE_TASK, DELETE_TASK, UPDATE_TASK } from "./types";
+import { ADD_TASK, TOGGLE_TASK, DELETE_TASK, UPDATE_TASK } from "../types";
 
 let initialState = {
-  projects: [
-    {id: 1, name: "School", color: "#FC6B97"},
-    {id: 2, name: "Personal", color: "#65BCB7"},
-    {id: 3, name: "Work", color: "#A45DE2"}
-  ],
-  currentProject: {id: 1, name: "school", color: "#FC6B97"},
   tasks: [
     {id:'1', task: 'The first task of todo list app 1', done: false, projectId: 1},
     {id:'2', task: 'The first task of todo list app 2', done: false, projectId: 1},
@@ -15,14 +9,9 @@ let initialState = {
   ]
 }
 
-export let reducer = (state = initialState, action) => {
+export let taskReducer = (state = initialState, action) => {
   let updatedTasks, index
   switch (action.type) {
-    case CHANGE_PROJECT:
-      return {
-        ...state,
-        currentProject: action.payload
-      }
     case ADD_TASK:
       return {
         ...state,

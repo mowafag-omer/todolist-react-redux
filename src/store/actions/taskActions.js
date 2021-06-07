@@ -1,11 +1,4 @@
-import { CHANGE_PROJECT, ADD_TASK, TOGGLE_TASK, DELETE_TASK, UPDATE_TASK } from './types'
-
-export function changeProject(project) {
-  return {
-    type: CHANGE_PROJECT,
-    payload: project
-  }
-}
+import { ADD_TASK, TOGGLE_TASK, DELETE_TASK, UPDATE_TASK } from '../types'
 
 export function addTask(task) {
   return {
